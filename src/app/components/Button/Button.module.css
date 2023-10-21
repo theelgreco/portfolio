@@ -1,0 +1,6 @@
+.button {
+  border-radius: 35px;
+  flex-grow: 1;
+  width: 100%;
+  background-color: var(--primary-theme);
+}

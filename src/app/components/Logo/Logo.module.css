@@ -1,0 +1,18 @@
+.logo {
+  height: 25%;
+  flex-shrink: 1;
+}
+
+.S {
+  fill: var(--primary-theme);
+}
+
+.K {
+  stroke: var(--primary-theme);
+  fill: var(--secondary-theme);
+}
+
+.letter {
+  fill: none;
+  stroke: var(--primary-theme);
+}
