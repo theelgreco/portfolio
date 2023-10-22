@@ -30,17 +30,8 @@ export default function Widget({ width, height, title, data, Child, limit }) {
 
     return res;
   }
-
-  function handlePrevPage() {
-    if (currentPage > 0) {
-      setCurrentPage(currentPage - 1);
-    }
-  }
-
-  function handleNextPage() {
-    if (currentPage < pages.length - 1) {
-      setCurrentPage(currentPage + 1);
-    }
+  function handlePageChange(e) {
+    setCurrentPage(Number(e.target.id));
   }
 
   return (
@@ -55,24 +46,25 @@ export default function Widget({ width, height, title, data, Child, limit }) {
                   return (
                     <Child
                       el={el}
-                      key={index}
+                      key={`page_data_${index}`}
                       data={pages[currentPage][index]}
                     />
                   );
                 }
               })}
             </div>
-            <div className={styles.buttonContainer}>
-              <button
-                onClick={handlePrevPage}
-                className={clsx(styles.arrow, {
-                  [styles.unavailable]: currentPage === 0,
-                })}></button>
-              <button
-                onClick={handleNextPage}
-                className={clsx(styles.arrow, {
-                  [styles.unavailable]: currentPage === pages.length - 1,
-                })}></button>
+            <div className={styles.pageBtnContainer}>
+              {pages.map((page, index) => {
+                return (
+                  <div
+                    className={clsx(styles.pageBtn, {
+                      [styles.current]: currentPage === index,
+                    })}
+                    id={index}
+                    onClick={handlePageChange}
+                    key={`page_number_${index}`}></div>
+                );
+              })}
             </div>
           </>
         ) : (
