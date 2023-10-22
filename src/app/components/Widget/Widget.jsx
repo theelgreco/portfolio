@@ -3,7 +3,15 @@ import styles from "./Widget.module.css";
 import { useState, useEffect } from "react";
 import clsx from "clsx";
 
-export default function Widget({ width, height, title, data, Child, limit }) {
+export default function Widget({
+  width,
+  height,
+  title,
+  style,
+  data,
+  Child,
+  limit,
+}) {
   const [pages, setPages] = useState(null);
   const [currentPage, setCurrentPage] = useState(0);
 
@@ -41,8 +49,8 @@ export default function Widget({ width, height, title, data, Child, limit }) {
       <div className={styles.content}>
         {pages ? (
           <>
-            <h2 className={styles.title}>{title}</h2>
-            <div className={styles.flex}>
+            {title ? <h2 className={styles.title}>{title}</h2> : <></>}
+            <div className={styles.flex} style={style}>
               {pages[currentPage].map((el, index) => {
                 {
                   return (
@@ -62,6 +70,7 @@ export default function Widget({ width, height, title, data, Child, limit }) {
                       [styles.current]: currentPage === index,
                     })}
                     id={index}
+                    tabIndex={0}
                     onClick={handlePageChange}
                     key={`page_number_${index}`}></div>
                 );

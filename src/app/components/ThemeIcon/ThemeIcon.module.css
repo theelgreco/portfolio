@@ -19,7 +19,7 @@
   height: 50px;
   border-radius: var(--container-radius);
   pointer-events: none;
-  top: 50%;
+  top: 45%;
 }
 
 .theme-square-container:has(> .theme-square:hover),

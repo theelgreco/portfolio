@@ -28,7 +28,6 @@
   display: flex;
   flex-flow: row wrap;
   align-items: center;
-  justify-content: center;
   text-align: center;
   width: 85%;
   gap: 10px;

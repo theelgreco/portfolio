@@ -36,18 +36,28 @@ export default function RightSection() {
         <Time />
         <Widget
           width={"90%"}
-          height={"35%"}
+          height={"45%"}
           title={"Tech stack"}
           data={Tech}
+          style={{ justifyContent: "space-between" }}
           Child={TechIcon}
-          limit={9}
+          limit={12}
         />
         <Widget
           width={"90%"}
-          height={"17%"}
+          height={"15%"}
           title={"Theme"}
           data={Themes}
+          style={{ justifyContent: "center" }}
           Child={ThemeIcon}
+          limit={3}
+        />
+        <Widget
+          width={"90%"}
+          height={"8%"}
+          // data={Themes}
+          style={{ justifyContent: "space-between" }}
+          // Child={ThemeIcon}
           limit={3}
         />
       </div>
