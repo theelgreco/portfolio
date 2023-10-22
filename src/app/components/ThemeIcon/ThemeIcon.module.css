@@ -1,0 +1,45 @@
+.purple-light {
+  background: #511aba;
+}
+
+.orange-dark {
+  background: #f0a854;
+}
+
+.lime-dark {
+  background: #c8f054;
+}
+
+.theme-square-container {
+  position: relative;
+  background: var(--primary-background);
+  box-shadow: none;
+  transition: none;
+  width: 50px;
+  height: 50px;
+  border-radius: var(--container-radius);
+  pointer-events: none;
+  top: 50%;
+}
+
+.theme-square-container:has(> .theme-square:hover),
+.theme-square-container:has(> .theme-square:focus),
+.theme-square-container:has(> .selected-theme) {
+  outline: 2px solid var(--primary-theme);
+  background: var(--menu-highlight);
+}
+
+.theme-square {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  width: 90%;
+  height: 90%;
+  border-radius: inherit;
+  pointer-events: auto;
+}
+
+.theme-square:focus {
+  outline: none;
+}

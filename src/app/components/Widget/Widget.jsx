@@ -22,6 +22,7 @@ export default function Widget({ width, height, title, data, Child, limit }) {
         res.push(page);
         page = [];
       } else if (i === data.length - 1) {
+        page.push(data[i]);
         res.push(page);
         break;
       }
@@ -30,6 +31,7 @@ export default function Widget({ width, height, title, data, Child, limit }) {
 
     return res;
   }
+
   function handlePageChange(e) {
     setCurrentPage(Number(e.target.id));
   }
@@ -45,7 +47,6 @@ export default function Widget({ width, height, title, data, Child, limit }) {
                 {
                   return (
                     <Child
-                      el={el}
                       key={`page_data_${index}`}
                       data={pages[currentPage][index]}
                     />

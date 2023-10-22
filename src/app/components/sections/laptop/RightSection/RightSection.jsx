@@ -2,6 +2,7 @@ import styles from "./RightSection.module.css";
 import Time from "@/app/components/Time/Time";
 import Widget from "@/app/components/Widget/Widget";
 import TechIcon from "@/app/components/TechIcon/TechIcon";
+import ThemeIcon from "@/app/components/ThemeIcon/ThemeIcon";
 
 const Tech = [
   "Javascript",
@@ -22,6 +23,12 @@ const Tech = [
   "Blender",
 ];
 
+const Themes = [
+  { theme: "orange-dark", primary: "#2E2E2E" },
+  { theme: "purple-light", primary: "#F8F5FD" },
+  { theme: "lime-dark", primary: "#C8F054" },
+];
+
 export default function RightSection() {
   return (
     <section className={styles.wrapper}>
@@ -35,7 +42,14 @@ export default function RightSection() {
           Child={TechIcon}
           limit={9}
         />
-        <Widget width={"90%"} height={"20%"} limit={3} />
+        <Widget
+          width={"90%"}
+          height={"17%"}
+          title={"Theme"}
+          data={Themes}
+          Child={ThemeIcon}
+          limit={3}
+        />
       </div>
     </section>
   );
