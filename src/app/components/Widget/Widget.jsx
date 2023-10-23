@@ -57,6 +57,7 @@ export default function Widget({
                     <Child
                       key={`page_data_${index}`}
                       data={pages[currentPage][index]}
+                      Data={pages[currentPage][index]}
                     />
                   );
                 }
