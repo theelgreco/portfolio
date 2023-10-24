@@ -4,6 +4,7 @@ import Widget from "@/app/components/Widget/Widget";
 import TechIcon from "@/app/components/TechIcon/TechIcon";
 import ThemeIcon from "@/app/components/ThemeIcon/ThemeIcon";
 import SocialIcon from "@/app/components/SocialIcon/SocialIcon";
+import Heart from "@/app/components/Heart/Heart";
 import {
   Codepen,
   Github,
@@ -47,7 +48,11 @@ export default function RightSection() {
           height={"45%"}
           title={"Tech stack"}
           data={tech}
-          style={{ justifyContent: "space-between" }}
+          flexStyle={{
+            justifyContent: "space-between",
+            marginTop: "5%",
+            marginBottom: "auto",
+          }}
           Child={TechIcon}
           limit={12}
         />
@@ -56,7 +61,7 @@ export default function RightSection() {
           height={"15%"}
           title={"Theme"}
           data={themes}
-          style={{ justifyContent: "space-evenly" }}
+          flexStyle={{ justifyContent: "space-evenly", margin: "auto" }}
           Child={ThemeIcon}
           limit={3}
         />
@@ -64,10 +69,11 @@ export default function RightSection() {
           width={"90%"}
           height={"8%"}
           data={socials}
-          style={{ justifyContent: "space-evenly" }}
+          contentStyle={{ padding: "10px", justifyContent: "center" }}
+          flexStyle={{ justifyContent: "space-evenly" }}
           Child={SocialIcon}
-          limit={3}
         />
+        <Heart />
       </div>
     </section>
   );

@@ -127,16 +127,12 @@ h2 {
 h3 {
   font-weight: 700;
   color: var(--h2-color);
-  font-size: 2rem;
+  font-size: 1.3rem;
 }
 
 h4,
 p {
   color: var(--body-text-color);
-}
-
-h3 {
-  font-weight: 500;
 }
 
 p,

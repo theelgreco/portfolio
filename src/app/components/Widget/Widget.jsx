@@ -7,7 +7,8 @@ export default function Widget({
   width,
   height,
   title,
-  style,
+  contentStyle,
+  flexStyle,
   data,
   Child,
   limit,
@@ -24,6 +25,10 @@ export default function Widget({
   function createPages(data, limit) {
     const res = [];
     let page = [];
+
+    if (!limit) {
+      return [data];
+    }
 
     for (let i = 0; i < data.length; i++) {
       if (i % limit === 0 && i > 0) {
@@ -46,11 +51,11 @@ export default function Widget({
 
   return (
     <div className={styles.border} style={{ width: width, height: height }}>
-      <div className={styles.content}>
+      <div className={styles.content} style={contentStyle}>
         {pages ? (
           <>
             {title ? <h2 className={styles.title}>{title}</h2> : <></>}
-            <div className={styles.flex} style={style}>
+            <div className={styles.flex} style={flexStyle}>
               {pages[currentPage].map((el, index) => {
                 {
                   return (
@@ -63,20 +68,24 @@ export default function Widget({
                 }
               })}
             </div>
-            <div className={styles.pageBtnContainer}>
-              {pages.map((page, index) => {
-                return (
-                  <div
-                    className={clsx(styles.pageBtn, {
-                      [styles.current]: currentPage === index,
-                    })}
-                    id={index}
-                    tabIndex={0}
-                    onClick={handlePageChange}
-                    key={`page_number_${index}`}></div>
-                );
-              })}
-            </div>
+            {limit ? (
+              <div className={styles.pageBtnContainer}>
+                {pages.map((page, index) => {
+                  return (
+                    <div
+                      className={clsx(styles.pageBtn, {
+                        [styles.current]: currentPage === index,
+                      })}
+                      id={index}
+                      tabIndex={0}
+                      onClick={handlePageChange}
+                      key={`page_number_${index}`}></div>
+                  );
+                })}
+              </div>
+            ) : (
+              <></>
+            )}
           </>
         ) : (
           <></>

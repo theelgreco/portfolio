@@ -1,0 +1,20 @@
+.container {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  gap: 10px;
+}
+
+.text {
+  color: var(--primary-theme);
+  font-style: italic;
+}
+
+.heart {
+  width: 80px;
+  scale: 1;
+  transition: scale 0.1s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  cursor: pointer;
+  fill: none;
+  stroke: #f0a854;
+}
