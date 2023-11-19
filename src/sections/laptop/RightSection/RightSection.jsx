@@ -1,15 +1,15 @@
 import styles from "./RightSection.module.css";
-import Time from "@/app/components/Time/Time";
-import Widget from "@/app/components/Widget/Widget";
-import TechIcon from "@/app/components/TechIcon/TechIcon";
-import ThemeIcon from "@/app/components/ThemeIcon/ThemeIcon";
-import SocialIcon from "@/app/components/SocialIcon/SocialIcon";
-import Heart from "@/app/components/Heart/Heart";
+import Time from "@/components/Time/Time";
+import Widget from "@/components/Widget/Widget";
+import TechIcon from "@/components/TechIcon/TechIcon";
+import ThemeIcon from "@/components/ThemeIcon/ThemeIcon";
+import SocialIcon from "@/components/SocialIcon/SocialIcon";
+import Heart from "@/components/Heart/Heart";
 import {
   Codepen,
   Github,
   Linkedin,
-} from "@/app/components/SocialIcons/SocialIcons";
+} from "@/components/SocialIcons/SocialIcons";
 
 const tech = [
   "Javascript",

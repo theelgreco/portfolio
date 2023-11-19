@@ -1,0 +1,64 @@
+.card {
+  background: #3a3a3a;
+  width: 290px;
+  height: 320px;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  box-sizing: border-box;
+  justify-content: space-between;
+}
+
+.picture {
+  width: 100%;
+  height: 50%;
+  background: #424242;
+  background-size: contain;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.title {
+  margin: 0;
+  font-family: "Geo-edit";
+  font-weight: 500;
+  font-style: normal;
+  font-size: 1.1rem;
+  color: #ebebeb;
+}
+
+.description {
+  margin: 0;
+  margin-top: 8px;
+  font-family: "Geo-edit";
+  font-weight: 100;
+  font-style: normal;
+  font-size: 0.8rem;
+  color: #ebebeb;
+}
+
+.tech-container::-webkit-scrollbar {
+  width: 0px;
+  height: 0px;
+}
+
+.tech-container {
+  width: 100%;
+  overflow-x: scroll;
+  align-self: baseline;
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 12px;
+}
+
+.tech-container div {
+  background: #f0a85440;
+  color: #ebebeb;
+  font-family: "Geo-edit";
+  font-weight: 400;
+  font-style: normal;
+  font-size: 0.7rem;
+  padding: 5px 10px;
+  border-radius: 20px;
+}

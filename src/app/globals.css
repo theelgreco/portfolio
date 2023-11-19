@@ -1,3 +1,5 @@
+/* ROOT VARIABLES */
+
 :root {
   --primary-background: #2e2e2e;
   --secondary-background: #353535;
@@ -24,10 +26,7 @@
   --logo-primary: var(--primary-theme);
 }
 
-* {
-  cursor: url("/cursors/orange.png"), auto;
-  user-select: none;
-}
+/* FONT INITIALIZATION */
 
 @font-face {
   font-family: Geo-edit;
@@ -102,6 +101,27 @@
   font-weight: 100;
 }
 
+/* GLOBAL STYLES */
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+  cursor: url("/cursors/orange.png"), auto;
+  user-select: none;
+}
+
+body {
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  background-color: var(--primary-background);
+}
+
+section {
+  padding: 2rem 4rem;
+}
+
 h1,
 h2,
 h3,
@@ -141,18 +161,7 @@ button {
   font-weight: 300;
 }
 
-* {
-  margin: 0;
-  box-sizing: border-box;
-}
-
-body {
-  overflow: hidden;
-  width: 100vw;
-  height: 100vh;
-  display: grid;
-  background-color: var(--primary-background);
-}
+/* MEDIA QUERIES */
 
 @media screen and (width > 1350px) {
   body {
