@@ -7,12 +7,14 @@ import MiddleSection from "./components/sections/laptop/MiddleSection/MiddleSect
 import TopSectionMobile from "./components/sections/mobile/TopSectionMobile/TopSectionMobile";
 import MiddleSectionMobile from "./components/sections/mobile/MiddleSectionMobile/MiddleSectionMobile";
 import BottomSectionMobile from "./components/sections/mobile/BottomSectionMobile/BottomSectionMobile";
+import Home from "./components/pages/Home/Home";
 
 import { useEffect, useState } from "react";
 
 export default function RootLayout({ children }) {
   const [mobile, setMobile] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
+  const [currentPage, setCurrentPage] = useState(Home);
 
   useEffect(() => {
     handleResize();
@@ -34,14 +36,17 @@ export default function RootLayout({ children }) {
         {!isLoading ? (
           !mobile ? (
             <>
-              <LeftSection />
-              <MiddleSection children={children} />
+              <LeftSection
+                currentPage={currentPage}
+                setCurrentPage={setCurrentPage}
+              />
+              <MiddleSection currentPage={currentPage} />
               <RightSection />
             </>
           ) : (
             <>
               <TopSectionMobile />
-              <MiddleSectionMobile children={children} />
+              <MiddleSectionMobile currentPage={currentPage} />
               <BottomSectionMobile />
             </>
           )

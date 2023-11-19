@@ -55,6 +55,11 @@
 }
 
 .menu > button:hover,
-.menu > button:focus {
-  background: #42372a;
+.menu > button:focus,
+.selected {
+  background-color: #42372a !important;
+}
+
+.menu button * {
+  pointer-events: none;
 }
