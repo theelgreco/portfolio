@@ -14,7 +14,7 @@ const example = {
 export default function Projects() {
   return (
     <>
-      <Title text={"PROJECTS"} />
+      <Title text={"PROJECTS"} breakpoint={1530} />
       <section>
         <ProjectCard project={example} />
       </section>

@@ -6,7 +6,7 @@ import Title from "@/components/Title/Title";
 export default function Home() {
   return (
     <>
-      <Title text={"STELIO.DEV"} />
+      <Title text={"STELIO.DEV"} breakpoint={1610} />
       <InfiniteBanner />
       <section></section>
     </>
