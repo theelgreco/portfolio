@@ -26,6 +26,7 @@
 
 * {
   cursor: url("/cursors/orange.png"), auto;
+  user-select: none;
 }
 
 @font-face {

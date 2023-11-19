@@ -19,6 +19,7 @@
   height: 50px;
   border-radius: var(--container-radius);
   pointer-events: none;
+  max-height: 100%;
 }
 
 .theme-square-container:has(> .theme-square:hover),

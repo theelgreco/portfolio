@@ -55,13 +55,18 @@ export default function RightSection() {
           }}
           Child={TechIcon}
           limit={12}
+          responsive={true}
         />
         <Widget
           width={"90%"}
           height={"15%"}
           title={"Theme"}
           data={themes}
-          flexStyle={{ justifyContent: "space-evenly", margin: "auto" }}
+          flexStyle={{
+            justifyContent: "space-evenly",
+            margin: "auto",
+            maxHeight: "40%",
+          }}
           Child={ThemeIcon}
           limit={3}
         />
