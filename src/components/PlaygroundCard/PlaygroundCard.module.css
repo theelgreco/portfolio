@@ -1,0 +1,94 @@
+.playground-card {
+  gap: 20px;
+  width: 80%;
+  background: #3a3a3a;
+  padding: 20px;
+  border-radius: 12px;
+  transition: 0.2s ease-out;
+}
+
+.playground-card a {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  align-items: baseline;
+  border-radius: inherit;
+  text-decoration: none;
+}
+
+.playground-card p {
+  font-family: "Geo-edit";
+  font-weight: 300;
+  font-style: normal;
+}
+
+.description {
+  color: #ebebeb;
+}
+
+.button {
+  color: #f0a854;
+}
+
+.arrow {
+  width: 20px;
+  height: fit-content;
+  margin-left: 10px;
+  transition: 0.2s ease-out;
+}
+
+.view-link {
+  display: flex;
+  align-items: inherit;
+}
+
+.title-container {
+  position: relative;
+  width: 100%;
+  height: 40px;
+  border-radius: 12px;
+}
+
+.title-container h2 {
+  position: absolute;
+  font-family: "Geo-edit";
+  font-weight: 700;
+  font-size: 2rem;
+  font-style: italic;
+  width: 100%;
+}
+
+.first {
+  color: #f9debf;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #f9debf;
+  transition: 0.2s ease-out;
+}
+
+.second {
+  color: #f0a854;
+  -webkit-text-fill-color: #f0a854;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #f9debf;
+  translate: 3px -2px;
+  transition: 0.2s ease-out;
+}
+
+.playground-card:hover {
+  transition: 0.2s ease-in;
+  background: #424242;
+}
+
+.playground-card:hover .first {
+  -webkit-text-fill-color: #f9debf30;
+}
+
+.playground-card:hover .second {
+  translate: 6px -4px;
+}
+
+.playground-card:hover .arrow {
+  translate: 3px 0;
+}
